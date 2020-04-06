@@ -6,8 +6,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		
 		features= "Feature",
-		glue="com.stepdefinition",
-		tags= "@edit"
+		glue="com.stepdefinition"
 		
 		
 		)
