@@ -1,3 +1,4 @@
+@discard
 Feature: Discard
 Scenario: Click on discard button.
 Given I am on Chegg Homepage

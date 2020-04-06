@@ -5,14 +5,39 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EditPages {
-WebDriver driver;
+public class SettingPages {
+public WebDriver driver;
 	
-	public EditPages(WebDriver driver) {
+	public SettingPages (WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 }
-	@FindBy (css="div.has-stickynav.is-primary-indigo.is-alternate-blue-grey div.container.is-fluid.has-mkcontent:nth-child(1) div.columns.is-gapless div.column.is-narrow.is-hidden-touch.sidebar:nth-child(1) aside:nth-child(1) ul.sidebar-menu li:nth-child(3) a:nth-child(1) > span:nth-child(2)")
+
+	@FindBy (xpath="//input[@id='login-user']")
+	WebElement userField;
+
+
+	public WebElement getUserField() {
+		return userField;
+	
+	}
+
+	@FindBy (xpath="//input[@id='login-pass']")
+	WebElement password;
+	
+	
+	public WebElement getPassword() {
+		return password;
+	}
+
+	@FindBy (xpath="//button[@type='submit']")
+	 WebElement login;
+
+	public WebElement getLogin() {
+		return login;
+	}
+
+	@FindBy (xpath="//span[contains(text(),'Settings')]")
 	public WebElement settingButton;
 	
 	public WebElement getSettingButton() {
@@ -38,7 +63,7 @@ WebDriver driver;
 	
 	}
 	
-	@FindBy (xpath="//input[@placeholder='John Smith']")
+	@FindBy (xpath="(//input[@class='input'])[4]")
 	WebElement usernameField;
 	
 

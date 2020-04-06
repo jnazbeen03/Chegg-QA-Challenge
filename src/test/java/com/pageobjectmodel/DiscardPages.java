@@ -22,7 +22,7 @@ public class DiscardPages {
 		
 	}
 	
-	@FindBy (linkText="Discard")
+	@FindBy (xpath="(//a[contains(text(),'Discard')])[3]")
 	public WebElement discardField;
 
 	public WebElement getDiscardField() {
